@@ -83,4 +83,13 @@
     <plugin name="cordova-plugin-ionic-webview" spec="^2.0.0" />
     <plugin name="cordova-plugin-ionic-keyboard" spec="^2.0.5" />
     <plugin name="cordova-plugin-camera" spec="^4.0.3" />
+    
+    <!-- IOS configuration to explain why app is using camera or photo library -->
+    <edit-config file="*-Info.plist" mode="merge" target="NSCameraUsageDescription">
+        <string>We need fresh images for OCR</string>
+    </edit-config>
+
+    <edit-config file="*-Info.plist" mode="merge" target="NSPhotoLibraryUsageDescription">
+        <string>We can also scan your library for images</string>
+    </edit-config>
 </widget>
